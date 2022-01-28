@@ -23,3 +23,5 @@ My algorithm took advantage of parallelization in two main ways:
   1. Initializing the boolean array responsible for keeping track of which odd numbers are prime.
   2. Finding the primes in each interval using the segmented sieve.
 In both these cases, each thread is responsible for one interval. As a result, this work can be done simultaneously. 
+
+Another optimization that I utilized throughout is accounting for the fact that 2 is the only even prime number. This lead to half the amount of space being used and never checking any even number throughout any of the sieves.
